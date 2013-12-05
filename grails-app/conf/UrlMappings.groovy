@@ -7,6 +7,8 @@ class UrlMappings {
 			}
 		}
 
+        "/console/$action?"(controller: 'console')
+
 		"/"(view:"/index")
 		"500"(view:'/error')
 	}
