@@ -20,9 +20,9 @@ class FemaleParticipant extends Participant{
     private static final Integer IDEAL_HIP_LINE = 34
 
     static constraints = {
-        bustLine nullable: true
-        waistLine nullable: true
-        hipLine nullable: true
+        bustLine nullable: true, blank: true
+        waistLine nullable: true, blank: true
+        hipLine nullable: true, blank: true
         importFrom Participant
     }
 

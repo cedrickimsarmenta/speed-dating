@@ -15,10 +15,10 @@ abstract class Participant {
     static hasMany = [interests: InterestType]
 
     static constraints = {
-        speedDatingId nullable: false, unique: true
-        age nullable: false
-        interestedIn nullable: false
-        name nullable: false
+        speedDatingId nullable: false, unique: true, blank: false
+        age nullable: true, blank: true
+        interestedIn nullable: true, blank: true
+        name nullable: false, blank: false
         gender nullable: false
     }
 
