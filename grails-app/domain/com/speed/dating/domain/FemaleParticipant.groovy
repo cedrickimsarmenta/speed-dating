@@ -48,6 +48,8 @@ class FemaleParticipant extends Participant{
                 }
             }
         }
+
+        return compatibility
     }
 
     Integer getSexiness() {
