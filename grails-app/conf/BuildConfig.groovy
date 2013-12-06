@@ -42,6 +42,9 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
+
+        /* For Geb and Spock */
+        test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
     }
 
     plugins {
@@ -62,5 +65,12 @@ grails.project.dependency.resolution = {
         compile ':cache:1.0.1'
 
         compile ":console:1.2"
+
+        //Testing
+        test(":spock:0.7") {
+            exclude "spock-grails-support"
+        }
+        test ":build-test-data:2.0.3"
+
     }
 }
