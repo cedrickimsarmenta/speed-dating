@@ -10,28 +10,28 @@
 	<g:field name="speedDatingId" type="number" value="${femaleParticipantInstance.speedDatingId}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: femaleParticipantInstance, field: 'age', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: femaleParticipantInstance, field: 'age', 'error')} ">
 	<label for="age">
 		<g:message code="femaleParticipant.age.label" default="Age" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="age" type="number" value="${femaleParticipantInstance.age}" required=""/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: femaleParticipantInstance, field: 'interestedIn', 'error')} required">
-	<label for="interestedIn">
-		<g:message code="femaleParticipant.interestedIn.label" default="Interested In" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select name="interestedIn" from="${com.dating.Gender?.values()}" keys="${com.dating.Gender.values()*.name()}" required="" value="${femaleParticipantInstance?.interestedIn?.name()}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: femaleParticipantInstance, field: 'name', 'error')} ">
-	<label for="name">
-		<g:message code="femaleParticipant.name.label" default="Name" />
 		
 	</label>
-	<g:textField name="name" value="${femaleParticipantInstance?.name}"/>
+	<g:field name="age" type="number" value="${femaleParticipantInstance.age}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: femaleParticipantInstance, field: 'interestedIn', 'error')} ">
+	<label for="interestedIn">
+		<g:message code="femaleParticipant.interestedIn.label" default="Interested In" />
+		
+	</label>
+	<g:select name="interestedIn" from="${com.dating.Gender?.values()}" keys="${com.dating.Gender.values()*.name()}" value="${femaleParticipantInstance?.interestedIn?.name()}" noSelection="['': '']"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: femaleParticipantInstance, field: 'name', 'error')} required">
+	<label for="name">
+		<g:message code="femaleParticipant.name.label" default="Name" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="name" required="" value="${femaleParticipantInstance?.name}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: femaleParticipantInstance, field: 'gender', 'error')} required">
