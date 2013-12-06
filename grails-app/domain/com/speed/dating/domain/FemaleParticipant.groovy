@@ -1,3 +1,5 @@
+package com.speed.dating.domain
+
 import com.dating.Gender
 import com.dating.InterestType
 
