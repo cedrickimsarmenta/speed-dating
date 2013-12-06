@@ -31,11 +31,15 @@ abstract class Participant {
     }
 
     String dateWith(Participant participant) {
-        if(participant.getCompatibility(participant) >= 10) {
+        if(participant.getCompatibility(this) >= 10) {
+            participant.kissMe(this)
             return "Sure, ${participant.name} I'd love to go out with you! *blush* <3"
         }
 
         return "Sorry, I'm busy at the moment. Try asking again next year, or when you get a better job."
+    }
+    public void kissMe(Participant kisser) {
+        //Complicated stuff
     }
 
     Participant chooseDate(List<Participant> participants) {
